@@ -4,27 +4,19 @@ import { ref } from 'vue';
 
 
 const homeGallery = ref([
-  { image: 'https://picsum.photos/600/400?1', title: 'Ardmore, PA' },
-  { image: 'https://picsum.photos/600/400?2', title: 'Downingtown, PA' },
-  { image: 'https://picsum.photos/600/400?3', title: 'Malvern, PA' }
-])
+  { image: '/dist/img/work2.jpg', title: '' },
+  { image: '/dist/img/work1.jpg', title: '' },
+  { image: '/dist/img/work3.jpg', title: '' },
+  { image: '/dist/img/work4.jpeg', title: '' }
 
-const balconyGallery = ref([
-  { image: 'https://picsum.photos/600/400?4', title: 'Balcony project #1' },
-  { image: 'https://picsum.photos/600/400?5', title: 'Balcony project #2' }
 ])
 </script>
 
 <template> 
 <div class="gallery-page">
     <GalleryGrid
-    title="Home Transformations"
+    title="Meie poolt tehtud tugevdamine"
     :items="homeGallery"
-  />
-
-  <GalleryGrid
-    title="Balcony & Terrace Projects"
-    :items="balconyGallery"
   />
 </div>
 </template>
@@ -44,7 +36,7 @@ const balconyGallery = ref([
 
     .gallery-item img {
         width: 100%;
-        height: auto;
+        height: 100%;
         border-radius: 6px;
     }
 </style>

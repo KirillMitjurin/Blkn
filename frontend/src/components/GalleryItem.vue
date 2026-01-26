@@ -7,6 +7,7 @@
 
 <template>
 <div class="gallery-item">
+    <div class="image-wrap">
     <n-image
       :src="image"
       :alt="title"
@@ -14,6 +15,8 @@
       width="100%"
       style="border-radius: 8px; cursor: zoom-in;"
     />
+  </div>
+
     <p class="caption"> {{ title }}</p>
 </div>
 </template>
@@ -25,6 +28,19 @@
 }
 .gallery-item img {
     display: block;
+}
+.image-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;     /* 👈 выбери: 1/1, 4/3, 16/9 */
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f0f0f0;
+}
+.image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* 🔥 ключевая строка */
+  display: block;
 }
 .caption {
   margin-top: 12px;

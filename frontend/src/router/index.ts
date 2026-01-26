@@ -5,6 +5,7 @@ import GalleryPage from "../views/GalleryPage.vue"
 import Contact from "../views/Contact.vue"
 
 const routes = [
+    {"path": "/", component: Home},
     {"path": "/home", component: Home},
     {"path": "/gallery", component: GalleryPage},
     {"path": "/contact", component: Contact}

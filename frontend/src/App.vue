@@ -17,4 +17,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+html, body { overflow-x: hidden; }
+img { max-width: 100%; height: auto; }
 </style>

@@ -54,20 +54,14 @@ onMounted(() => {
   });
 });
 
-
-document.querySelectorAll(".fade-up").forEach(el => {
-  observer.observe(el);
-});
-  
-
 </script>
 
 <template>
     <section class="hero">
         <div class="content fade-up">
-            <h1 >Rõdude remont ja ehitus</h1>
+            <h1 >Rõdude ja lodžade professionaalne renoveerimine</h1>
             <p>
-                Teostame rõdude ja terrasside renoveerimistöid ning ehitustöid.
+                Teostame rõdude ja lodžade remonti, tugevdamist ja taastamist korteriühistutele ning hoonete omanikele kogu Baltikumis.
             </p>
         </div>
     </section>
@@ -75,10 +69,19 @@ document.querySelectorAll(".fade-up").forEach(el => {
     <section class="description fade-up">
         <h1 class="fade-up">Meist</h1>
         <div class="desc-content">
-            <p class="text">
-                <b> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </b>
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
+<p class="text">
+  <b>
+    Oleme rõdude ja lodžade renoveerimisele spetsialiseerunud ettevõte.
+  </b>
+  <br /><br />
+  Pakume professionaalseid teenuseid rõdude ja lodžade hoolduseks, remondiks ja
+  konstruktsioonide tugevdamiseks. Meie töö hõlmab vanade ja kahjustatud
+  elementide demonteerimist, uute kinnituste paigaldamist ning metallkonstruktsioonide
+  keevitust ja ankurdamist.
+  <br /><br />
+  Teenindame korteriühistuid ning hoonete omanikke, aidates pikendada rõdude eluiga,
+  parandada ohutust ja säilitada hoonete tehnilist seisukorda.
+</p>
         </div>
     </section>
 
@@ -88,29 +91,26 @@ document.querySelectorAll(".fade-up").forEach(el => {
     <div class="services-container">
 
       <div class="service-card">
-        <img src="https://picsum.photos/400/300?1" />
-        <h3>Rõdude renoveerimine</h3>
-        <p>Vanade rõdude täielik renoveerimine ja tugevdamine.</p>
+        <img src="\dist\img\stock1.jpg" />
+        <h3>Rõdude ja lodžade renoveerimine</h3>
+        <p>Vanade rõdude ja lodžade remont ja taastamine, sealhulgas konstruktsioonide
+tugevdamine ja kahjustatud elementide vahetus.</p>
       </div>
       <div class="service-card">
-        <img src="https://picsum.photos/400/300?2" />
-        <h3>Terrasside ehitus</h3>
+        <img src="/dist/img/stock2.jpg" />
+        <h3>Konstruktsioonide tugevdamine</h3>
         <p>Uute terrasside projekteerimine ja ehitus.</p>
       </div>
 
       <div class="service-card">
-        <img src="https://picsum.photos/400/300?3" />
-        <h3>Hooldustööd</h3>
-        <p>Regulaarsed hooldustööd ja parandused.</p>
+        <img src="/dist/img/picofcolour.jpg" />
+        <h3>Hooldus ja taastamistööd</h3>
+        <p>Rõdude ja lodžade hooldus, värvimine, metallosade taastamine ning
+standardsete kinnituste asendamine uute ja vastupidavamatega.</p>
       </div>
     </div>
 
 </section>
-
-
-
-
-    
 
 <section class="review ">
   <div class="review-container fade-up">
@@ -140,9 +140,10 @@ document.querySelectorAll(".fade-up").forEach(el => {
 
 <section class="cta">
   <div class="cta-content fade-up">
-    <h2>Kas oled valmis alustama?</h2>
+    <h2>Võta meiega ühendust</h2>
     <p>
-      Kirjelda meile oma ideed ja leiame koos parima lahenduse sinu rõdu või terrassi jaoks.
+Kirjelda lühidalt oma objekti või probleemi ning leiame sobiva lahenduse
+rõdu või lodža renoveerimiseks ja tugevdamiseks.
     </p>
     <button @click="toContact">
       Võta meiega ühendust
@@ -230,9 +231,15 @@ document.querySelectorAll(".fade-up").forEach(el => {
   background: white;
   border-radius: 6px;
   overflow: hidden;
-  max-width: 360px;
+  width: 360px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
   transition: transform 0.3s ease;
+}
+.service-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
 }
 
 .service-card:hover {
@@ -367,6 +374,109 @@ document.querySelectorAll(".fade-up").forEach(el => {
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (max-width: 900px) {
+  /* HERO */
+  .hero {
+    height: 70vh;
+    background-attachment: scroll; /* fixed на мобиле часто лагучий */
+  }
+
+  .content {
+    padding: 20px;
+    max-width: 92%;
+  }
+
+  .content h1 {
+    font-size: 28px;
+    letter-spacing: 0.5px;
+  }
+
+  .content p {
+    font-size: 16px;
+  }
+
+  /* ABOUT */
+  .text {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* SERVICES */
+  .services {
+    padding: 50px 16px;
+  }
+
+  .services-container {
+    gap: 16px;
+  }
+
+  .service-card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .service-card h3 {
+    padding: 12px 14px 0 14px;
+    font-size: 18px;
+  }
+
+  .service-card p {
+    padding: 8px 14px 16px 14px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* REVIEW */
+  .review {
+    padding: 60px 16px;
+  }
+
+  .review-container {
+    grid-template-columns: 1fr; /* вместо 1fr 2fr */
+    gap: 28px;
+  }
+
+  .review-info {
+    text-align: center;
+  }
+
+  .review-info h2 {
+    max-width: 100%;
+    font-size: 22px;
+  }
+
+  .review-text p {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .arrows {
+    justify-content: center;
+    gap: 18px;
+    margin-top: 22px;
+  }
+
+  /* CTA */
+  .cta {
+    padding: 70px 16px;
+  }
+
+  .cta h2 {
+    font-size: 26px;
+  }
+
+  .cta p {
+    font-size: 16px;
+  }
+
+  .cta button {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
 
 
 </style>

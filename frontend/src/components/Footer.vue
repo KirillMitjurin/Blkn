@@ -1,26 +1,45 @@
 <template>
-    <footer class="footer">
-        <div class="footer-container">
-            <!-- Logo Section -->
-            <!-- <div class="footer-section logo-section">
-                <img src="@/assets/logo.png" alt="Logo" class="footer-logo" />
-            </div> -->
+  <footer class="footer">
+    <div class="footer-container">
 
-            <!-- Contact Section -->
-            <div class="footer-section contact-section">
-                <h3>Kontaktid</h3>
-                <div class="contact-item">
-                    <span class="label">Email :</span>
-                    <a href="mailto:info@example.com">info@example.com</a>
-                </div>
-                <div class="contact-item">
-                    <span class="label">Telefoni Number:</span>
-                    <a href="tel:+1234567890">+1 (234) 567-890</a>
-                </div>
+      <!-- LEFT: Contacts -->
+      <div class="footer-section contact-section">
+        <h3>Kontaktid</h3>
 
-            </div>
+        <div class="contact-item">
+          <span class="label">Email:</span>
+          <a href="mailto:boronetsivanevgenevich81@gmail.com">
+            boronetsivanevgenevich81@gmail.com
+          </a>
         </div>
-    </footer>
+
+        <div class="contact-item">
+          <span class="label">Telefon:</span>
+          <a href="tel:+37253664998">+372 5366 4998</a>
+        </div>
+      </div>
+
+      <!-- CENTER: Logo -->
+      <div class="footer-section logo-section">
+        <img src="/dist/img/logofreee.png" alt="Logo" class="footer-logo" />
+      </div>
+
+      <!-- RIGHT: Company info -->
+      <div class="footer-section company-section">
+        <h3>Ettevõte</h3>
+
+        <div class="company-item">
+          <strong>SilverShell OÜ</strong>
+        </div>
+
+        <div class="company-item">
+          Retke tee 22-26<br />
+          Tallinn, Estonia
+        </div>
+      </div>
+
+    </div>
+  </footer>
 </template>
 
 <script>
@@ -31,56 +50,83 @@ export default {
 
 <style scoped>
 .footer {
-    background-color: #ffffff;
-    color: #000000;
-    padding: 40px 20px;
-    margin-top: 0px;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 60px 20px;
 }
 
 .footer-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+  max-width: 1400px;
+  max-height: 200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 40px;
 }
 
+/* Sections */
 .footer-section {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Center logo */
+.logo-section {
+  align-items: center;
+}
+
+.footer-logo {
+  max-height: 180px;
+  width: auto;
+}
+
+/* Headings */
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 
-.contact-section h3 {
-    margin-bottom: 15px;
-    font-size: 18px;
-}
-
+/* Contact */
 .contact-item {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
 
 .contact-item .label {
-    font-weight: bold;
+  font-weight: 600;
 }
 
 .contact-item a {
-    color: #3498db;
-    text-decoration: none;
-    transition: color 0.3s;
+  color: #3498db;
+  text-decoration: none;
 }
 
 .contact-item a:hover {
-    color: #2980b9;
+  color: #2980b9;
 }
 
-.copyright-section {
-    grid-column: 1 / -1;
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid #34495e;
+/* Company */
+.company-item {
+  margin-bottom: 8px;
+  line-height: 1.5;
+
 }
+
+/* Mobile */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+}
+
 </style>

@@ -8,14 +8,14 @@ import { RouterLink } from 'vue-router'
 
       <!-- Logo -->
       <RouterLink to="/home" class="logo">
-        logo
+        <img src="/dist/img/logonamefree.png" alt="Logo" class="navbar-logo" />
       </RouterLink>
 
       <!-- Menu -->
       <div class="nav-links">
        <!--  <RouterLink to="/home" class="nav-item">Home</RouterLink>--> 
         <RouterLink to="/gallery" class="nav-item">Meie tööd</RouterLink>
-        <RouterLink to="/contact" class="nav-item">Contact</RouterLink>
+        <RouterLink to="/contact" class="nav-item">Kontakt</RouterLink>
       </div>
 
     </div>
@@ -24,6 +24,7 @@ import { RouterLink } from 'vue-router'
 </template>
 
 <style scoped>
+
 .app-header {
   position:relative;
   top: 0;
@@ -46,13 +47,6 @@ import { RouterLink } from 'vue-router'
   align-items: center;
 }
 
-.logo {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  font-size: 22px;
-  letter-spacing: 2px;
-  font-weight: 500;
-}
 
 .nav-links {
   display: flex;
@@ -81,5 +75,57 @@ import { RouterLink } from 'vue-router'
 
 .nav-item:hover::after {
   width: 100%;
+}
+.navbar-logo {
+  height: calc(150px);
+  width: auto;
+}
+
+
+@media (max-width: 600px) {
+  .app-header {
+    height: 72px;          /* было 120px */
+  }
+
+  .nav-container {
+    padding: 0 14px;       /* было 60px */
+  }
+
+  .navbar-logo {
+    height: 44px;          /* компактно для мобилки */
+  }
+
+  .nav-links {
+    gap: 16px;             /* было 40px */
+  }
+
+  .nav-item {
+    font-size: 12px;
+    letter-spacing: 1px;   /* было 2px */
+  }
+
+  .nav-item::after {
+    bottom: -4px;
+  } 
+}
+
+@media (max-width: 360px) {
+  .nav-links {
+    gap: 10px;
+  }
+  .nav-item {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 350px) {
+  .navbar-logo { max-width: 110px; }
+  .nav-container { padding: 0 10px; }
+  .nav-links { gap: 10px; }
+}
+@media (max-width: 600px) {
+  .hero {
+    min-height: calc(100vh - 72px);
+  }
 }
 </style>
