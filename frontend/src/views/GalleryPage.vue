@@ -4,10 +4,10 @@ import { ref } from 'vue';
 
 
 const homeGallery = ref([
-  { image: '/dist/img/work2.jpg', title: '' },
-  { image: '/dist/img/work1.jpg', title: '' },
-  { image: '/dist/img/work3.jpg', title: '' },
-  { image: '/dist/img/work4.jpeg', title: '' }
+  { image: 'img/work2.jpg', title: '' },
+  { image: 'img/work1.jpg', title: '' },
+  { image: 'img/work3.jpg', title: '' },
+  { image: 'img/work4.jpeg', title: '' }
 
 ])
 </script>
@@ -15,7 +15,7 @@ const homeGallery = ref([
 <template> 
 <div class="gallery-page">
     <GalleryGrid
-    title="Meie poolt tehtud tugevdamine"
+    title="Tehtud tugevdamistööd"
     :items="homeGallery"
   />
 </div>

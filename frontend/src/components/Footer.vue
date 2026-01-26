@@ -21,7 +21,7 @@
 
       <!-- CENTER: Logo -->
       <div class="footer-section logo-section">
-        <img src="/dist/img/logofreee.png" alt="Logo" class="footer-logo" />
+        <img src="/img/logofreee.png" alt="Logo" class="footer-logo" />
       </div>
 
       <!-- RIGHT: Company info -->

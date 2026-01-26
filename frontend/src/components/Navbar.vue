@@ -8,7 +8,7 @@ import { RouterLink } from 'vue-router'
 
       <!-- Logo -->
       <RouterLink to="/home" class="logo">
-        <img src="/dist/img/logonamefree.png" alt="Logo" class="navbar-logo" />
+        <img src="/public/img/logonamefree.png" alt="Logo" class="navbar-logo" />
       </RouterLink>
 
       <!-- Menu -->

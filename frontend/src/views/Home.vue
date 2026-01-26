@@ -91,19 +91,19 @@ onMounted(() => {
     <div class="services-container">
 
       <div class="service-card">
-        <img src="\dist\img\stock1.jpg" />
+        <img src="/img/stock1.jpg" />
         <h3>Rõdude ja lodžade renoveerimine</h3>
         <p>Vanade rõdude ja lodžade remont ja taastamine, sealhulgas konstruktsioonide
 tugevdamine ja kahjustatud elementide vahetus.</p>
       </div>
       <div class="service-card">
-        <img src="/dist/img/stock2.jpg" />
+        <img src="/img/stock2.jpg" />
         <h3>Konstruktsioonide tugevdamine</h3>
         <p>Uute terrasside projekteerimine ja ehitus.</p>
       </div>
 
       <div class="service-card">
-        <img src="/dist/img/picofcolour.jpg" />
+        <img src="/img/picofcolour.jpg" />
         <h3>Hooldus ja taastamistööd</h3>
         <p>Rõdude ja lodžade hooldus, värvimine, metallosade taastamine ning
 standardsete kinnituste asendamine uute ja vastupidavamatega.</p>
