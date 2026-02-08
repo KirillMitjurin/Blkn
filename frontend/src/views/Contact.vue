@@ -59,7 +59,7 @@
           <h2>Ettevõte</h2>
           <p class="company"><strong>SilverShell OÜ</strong></p>
           <p class="address">
-            Raua 15-43<br />
+            Võru tn 2 -68<br />
             Tallinn, Estonia
           </p>
 
